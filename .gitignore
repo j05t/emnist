@@ -1,3 +1,4 @@
 datasets/
-weights/
-history/
+dropout_0.3/
+dropout_0.5/
+dropout_0.7/
