@@ -2,6 +2,8 @@
 EMNIST Digits dataset introduced by https://arxiv.org/abs/1702.05373v1 downloaded from https://www.nist.gov/itl/iad/image-group/emnist-dataset (Matlab format dataset). The matlab format dataset can be conveniently imported with scipy.io.loadmat.
 Model was trained from scratch on EMNIST Digits training data using realtime data augmentation. 
 
+All test error rates in percent. Source code resides in ![emnist.ipynb](emnist.ipynb), detailed results can be viewed at ![plot_models](plot_history/plot_csv.ipynb). Best model weights have been uploaded.
+
 ![accuracies](plot_history/accuracy.png)![ensemble accuracies](plot_history/accuracy_ensembles.png)
 
 # Test error rates of this model on EMNIST Digits test data:
