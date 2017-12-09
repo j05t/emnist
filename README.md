@@ -30,4 +30,4 @@ The most promising previously trained models have been loaded, further training 
 ### Dropout 0.2
 Loaded 256 epoch models, learning rate set to 0.00001
 * 0.1600027084350586% test error rate with ensemble of 10 CNNs at 267 epochs
-* 0.17750263214111328% test error rate for best single model at 262 epochs
+* 0.17750263214111328% test error rate for best single model at 262 epochs (262epochs_weights_model_8.pkl)
