@@ -7,18 +7,28 @@ All test error rates in percent. Source code resides in ![emnist.ipynb](emnist.i
 ![accuracies](plot_history/accuracy.png)![ensemble accuracies](plot_history/accuracy_ensembles.png)
 
 # Test error rates of this model on EMNIST Digits test data:
-## Dropout 0.2
+
+## Automatic learning rate adjustment with Adaptive Moment Estimation
+### Dropout 0.2
 * 0.1675% test error rate with ensemble of 10 CNNs after 256 epochs
 * 0.20% test error rate for best single model after 128 epochs
 
-## Dropout 0.3
+### Dropout 0.3
 * 0.17% test error rate with ensemble of 10 CNNs after 240 epochs
 * 0.20% test error rate for best single model after 241 epochs
 
-## Dropout 0.4
+### Dropout 0.4
 * 0.1675% test error rate with ensemble of 10 CNNs after 288 epochs
 * 0.21% test error rate for best single model after 272 epochs
 
-## Dropout 0.5
+### Dropout 0.5
 * 0.1825% test error rate with ensemble of 10 CNNs after 208 epochs
 * 0.21% test error rate for best single model after 144 epochs
+
+## Manually set learning rates:
+The most promising previously trained models have been loaded, further training was done with fixed learning rates.
+
+### Dropout 0.2
+Loaded 256 epoch models, learning rate set to 0.0001
+* 0.1600027084350586 test error rate with ensemble of 10 CNNs at 267 epochs
+* 0.17750263214111328 test error rate for best single model at 262 epochs
