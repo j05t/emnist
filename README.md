@@ -11,8 +11,8 @@ All test error rates in percent. Source code resides in https://github.com/j05t/
 The most promising previously trained models have been loaded, further training was done with a fixed learning rate. Setting the learning rate manually __improved__ the __test error rate of 0.1675%__ attained by training with automatic learning rate adaption __to a test error rate of 0.16%__. This makes for an improvement of __three additional correct predictions__. Further improvements seem unlikely with this model.
 ### Dropout 0.2
 Loaded 256 epoch models, learning rate set to 0.00001
-* 0.1600027084350586% test error rate with ensemble of 10 CNNs at 267 epochs
-* 0.17750263214111328% test error rate for best single model at 262 epochs (262epochs_weights_model_8.pkl)
+* __0.16%__ test error rate with ensemble of 10 CNNs at 267 epochs
+* __0.1775%__ test error rate for best single model at 262 epochs (262epochs_weights_model_8.pkl)
 
 ## Automatic learning rate adjustment with Adaptive Moment Estimation
 ### Dropout 0.2
