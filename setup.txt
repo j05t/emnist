@@ -1,5 +1,5 @@
-Install Anaconda
-https://www.anaconda.com/download/
+Install Anaconda (Python 3.6 version)
+https://www.anaconda.com/download/#linux
 
 Install CUDA:
 http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
