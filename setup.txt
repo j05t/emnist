@@ -1,0 +1,57 @@
+Install Anaconda
+https://www.anaconda.com/download/
+
+Install CUDA:
+http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
+
+Install keras and tensorflow-gpu backend:
+conda install keras
+conda install tensorflow-gpu
+
+
+Edit ~./keras/keras.json to specify preferred backend.
+Models were created and trained with the theano backend but should work 
+fine with the tensorflow backend as well. Unfortunately, saving training 
+histories does not seem to work with the tensorflow backend anymore.
+
+to use the tensorflow-gpu backend:
+{
+    "floatx": "float32",
+    "backend": "tensorflow",
+    "image_dim_ordering": "th",
+    "image_data_format": "channels_first",
+    "epsilon": 1e-07
+}
+
+theano backend (development of theano is discontinued):
+{
+    "epsilon": 1e-07,
+    "backend": "theano",
+    "floatx": "float32",
+    "image_dim_ordering": "th",
+    "image_data_format": "channels_first"
+}
+
+
+run nvidia-smi to check CUDA status:
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 387.26                 Driver Version: 387.26                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  GeForce GTX 1070    Off  | 00000000:09:00.0  On |                  N/A |
+|  0%   45C    P2    64W / 200W |   7883MiB /  8105MiB |     98%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|    0      1264      G   /usr/lib/xorg/Xorg                           110MiB |
+|    0      2647      G   ...-token=431981E356825F848461BC5860877D1E    75MiB |
+|    0      4747      C   /home/js/anaconda3/bin/python               7685MiB |
++-----------------------------------------------------------------------------+
+
+Open the Jupyter notebook:
+jupyter notebook emnist.ipynb 
