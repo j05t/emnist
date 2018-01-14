@@ -5,14 +5,23 @@ Install CUDA:
 http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
 
 Install keras and tensorflow-gpu backend:
-conda install keras
-conda install tensorflow-gpu
+conda update --all
+conda install tensorflow-gpu keras
 
 
 Edit ~./keras/keras.json to specify preferred backend.
 Models were created and trained with the theano backend but should work 
 fine with the tensorflow backend as well. Unfortunately, saving training 
 histories does not seem to work with the tensorflow backend anymore.
+
+theano backend (development of theano is discontinued):
+{
+    "epsilon": 1e-07,
+    "backend": "theano",
+    "floatx": "float32",
+    "image_dim_ordering": "th",
+    "image_data_format": "channels_first"
+}
 
 to use the tensorflow-gpu backend:
 {
@@ -23,14 +32,6 @@ to use the tensorflow-gpu backend:
     "epsilon": 1e-07
 }
 
-theano backend (development of theano is discontinued):
-{
-    "epsilon": 1e-07,
-    "backend": "theano",
-    "floatx": "float32",
-    "image_dim_ordering": "th",
-    "image_data_format": "channels_first"
-}
 
 
 run nvidia-smi to check CUDA status:
