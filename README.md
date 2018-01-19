@@ -2,7 +2,7 @@
 EMNIST Digits dataset introduced by https://arxiv.org/abs/1702.05373v1 downloaded from https://www.nist.gov/itl/iad/image-group/emnist-dataset (Matlab format dataset). The matlab format dataset can be conveniently imported with scipy.io.loadmat.
 Model was trained from scratch on EMNIST Digits training data using realtime data augmentation. 
 
-All test error rates in percent. All results were obtained with Keras using the Theano backend. Source code resides in https://github.com/j05t/emnist/blob/master/emnist.ipynb, a slightly adapted version using the tensorflow backend is available at https://github.com/j05t/emnist/blob/master/emnist_tensorflow.ipynb. See setup.txt for information regarding setup and usage. Detailed results can be viewed at https://github.com/j05t/emnist/blob/master/plot_history/plot_csv.ipynb. Best model weights have been uploaded.
+All test error rates in percent. All results were obtained with Keras using the Theano backend. Source code resides in https://github.com/j05t/emnist/blob/master/emnist.ipynb, a slightly adapted (and more recent) version using the TensorFlow backend is available at https://github.com/j05t/emnist/blob/master/emnist_tensorflow.ipynb. See https://github.com/j05t/emnist/blob/master/setup.txt for information regarding setup and usage. Detailed results can be viewed at https://github.com/j05t/emnist/blob/master/plot_history/plot_csv.ipynb. Best model weights have been uploaded.
 # Test error rates of this model on EMNIST Digits test data:
 0.16% test error rate gives us a total of 64 wrong predictions on the EMNIST Digits testing dataset of 40,000 images:
 ![incorrect predictions](incorrect_predictions_emnist.png)
