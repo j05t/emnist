@@ -35,7 +35,8 @@ to use the tensorflow-gpu backend:
     "epsilon": 1e-07
 }
 
-The image data format can also be set directly in Python if you don't want to change the configuration files:
+The image data format can also be set directly in Python if you don't want to change the tensorflow configuration files:
+
     # somewhere after initial imports
     import keras.backend as K
     K.set_image_data_format("channels_first")
@@ -57,9 +58,9 @@ run nvidia-smi to check CUDA status:
 |  GPU       PID   Type   Process name                             Usage      |
 |=============================================================================|
 |    0      1264      G   /usr/lib/xorg/Xorg                           110MiB |
-|    0      2647      G   ...-token=431981E356825F848461BC5860877D1E    75MiB |
 |    0      4747      C   /home/js/anaconda3/bin/python               7685MiB |
 +-----------------------------------------------------------------------------+
 
 Open the Jupyter notebook:
-jupyter notebook emnist.ipynb 
+jupyter notebook emnist.ipynb   # when using the theano backend
+jupyter notebook emnist_tensorflow.ipynb    # when using the tensorflow backend
