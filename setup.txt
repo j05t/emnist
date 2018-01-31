@@ -4,9 +4,12 @@ https://www.anaconda.com/download/#linux
 Install CUDA:
 http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
 
-Install keras and tensorflow-gpu backend:
+Install keras and tensorflow-gpu backend (GPU backend for efficient training):
 conda update --all
 conda install tensorflow-gpu keras
+
+If you ONLY want to do inference (i.e. make predictions) the CPU backend is sufficient:
+conda install tensorflow keras
 
 
 Edit ~./keras/keras.json to specify preferred backend.
@@ -32,6 +35,10 @@ to use the tensorflow-gpu backend:
     "epsilon": 1e-07
 }
 
+The image data format can also be set directly in Python if you don't want to change the configuration files:
+    # somewhere after initial imports
+    import keras.backend as K
+    K.set_image_data_format("channels_first")
 
 
 run nvidia-smi to check CUDA status:
