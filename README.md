@@ -4,7 +4,7 @@ Model was trained from scratch on EMNIST Digits training data using realtime dat
 
 All test error rates in percent. All results were obtained with Keras using the Theano backend. Source code resides in https://github.com/j05t/emnist/blob/master/emnist.ipynb, a slightly adapted (and more recent) version using the TensorFlow backend is available at https://github.com/j05t/emnist/blob/master/emnist_tensorflow.ipynb. See https://github.com/j05t/emnist/blob/master/setup.txt for information regarding setup and usage. Detailed results can be viewed at https://github.com/j05t/emnist/blob/master/plot_history/plot_csv.ipynb. Best model weights have been uploaded.
 # Test error rates of this model on EMNIST Digits test data:
-0.16% test error rate gives us a total of 64 wrong predictions on the EMNIST Digits testing dataset of 40,000 images:
+0.16% test error rate gives us a total of 64 incorrect predictions on the EMNIST Digits testing dataset of 40,000 images:
 ![incorrect predictions](incorrect_predictions_emnist.png)
 
 ## Results for manually set learning rates:
@@ -12,7 +12,7 @@ The most promising previously trained models have been loaded, further training 
 ### Dropout 0.2
 ![accuracies after training with manual set learning rate](plot_history/accuracies_manual_lr.png)
 
-Loaded 256 epoch models, learning rate set to 0.00001. The plot above shows the training history with manual learning rate  from epoch 257 to epoch 271. Accuracies for epochs 256 and 272 which have been achieved with automatic learning rate adaption have been added for comparison.
+Loaded 256 epoch models, learning rate set to 1e-5. The plot above shows the training history with manual learning rate  from epoch 257 to epoch 271. Accuracies for epochs 256 and 272 which have been achieved with automatic learning rate adaption have been added for comparison.
 * 0.16% test error rate with ensemble of 10 CNNs at 267 epochs (dropout_0.2/weights/267epochs_weights_model_?.pkl)
 * 0.175% test error rate for best single model at 258 epochs (dropout_0.2/weights/258epochs_weights_model_7.pkl)
 
