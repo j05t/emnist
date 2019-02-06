@@ -26,22 +26,6 @@ theano backend (development of theano is discontinued):
     "image_data_format": "channels_first"
 }
 
-to use the tensorflow-gpu backend:
-{
-    "floatx": "float32",
-    "backend": "tensorflow",
-    "image_dim_ordering": "th",
-    "image_data_format": "channels_first",
-    "epsilon": 1e-07
-}
-
-The image data format can also be set directly in Python if you don't want to change the tensorflow configuration files:
-
-    # somewhere after initial imports
-    import keras.backend as K
-    K.set_image_data_format("channels_first")
-
-
 run nvidia-smi to check CUDA status:
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 387.26                 Driver Version: 387.26                    |
