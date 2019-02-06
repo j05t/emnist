@@ -1,5 +1,5 @@
 # Classify EMNIST Digits using Convolutional Neural Networks
-EMNIST Digits dataset introduced by https://arxiv.org/abs/1702.05373v1 downloaded from https://www.nist.gov/itl/iad/image-group/emnist-dataset (Matlab format dataset). The matlab format dataset can be conveniently imported with scipy.io.loadmat.
+EMNIST (Cohen, G., Afshar, S., Tapson, J., & van Schaik, A. (2017). EMNIST: an extension of MNIST to handwritten letters.)  Digits dataset introduced by https://arxiv.org/abs/1702.05373 downloaded from https://www.nist.gov/itl/iad/image-group/emnist-dataset (Matlab format dataset). The matlab format dataset can be conveniently imported with scipy.io.loadmat.
 Model was trained from scratch on EMNIST Digits training data using realtime data augmentation. 
 
 All test error rates in percent. All results were obtained with Keras using the Theano backend. Source code resides in https://github.com/j05t/emnist/blob/master/emnist.ipynb, a slightly adapted (and more recent) version using the TensorFlow backend is available at https://github.com/j05t/emnist/blob/master/emnist_tensorflow.ipynb. See https://github.com/j05t/emnist/blob/master/setup.txt for information regarding setup and usage. Detailed results can be viewed at https://github.com/j05t/emnist/blob/master/plot_history/plot_csv.ipynb. Best model weights have been uploaded. 
@@ -9,7 +9,7 @@ A JSON/H5 export for the best single model has been uploaded into export_json_h5
 0.16% test error rate gives us a total of 64 incorrect predictions on the EMNIST Digits testing dataset of 40,000 images:
 ![incorrect predictions](incorrect_predictions_emnist.png)
 
-## Results for manually set learning rates:
+## Results for manually set fixed learning rates:
 The most promising previously trained models have been loaded, further training was done with a fixed learning rate. Setting the learning rate manually __improved__ the __test error rate of 0.1675%__ attained by training with automatic learning rate adaption __to a test error rate of 0.16%__. This makes for an improvement of __three additional correct predictions__. Further improvements seem unlikely with this model.
 ### Dropout 0.2
 ![accuracies after training with manual set learning rate](plot_history/accuracies_manual_lr.png)
