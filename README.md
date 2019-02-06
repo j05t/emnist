@@ -2,7 +2,9 @@
 EMNIST Digits dataset introduced by https://arxiv.org/abs/1702.05373v1 downloaded from https://www.nist.gov/itl/iad/image-group/emnist-dataset (Matlab format dataset). The matlab format dataset can be conveniently imported with scipy.io.loadmat.
 Model was trained from scratch on EMNIST Digits training data using realtime data augmentation. 
 
-All test error rates in percent. All results were obtained with Keras using the Theano backend. Source code resides in https://github.com/j05t/emnist/blob/master/emnist.ipynb, a slightly adapted (and more recent) version using the TensorFlow backend is available at https://github.com/j05t/emnist/blob/master/emnist_tensorflow.ipynb. See https://github.com/j05t/emnist/blob/master/setup.txt for information regarding setup and usage. Detailed results can be viewed at https://github.com/j05t/emnist/blob/master/plot_history/plot_csv.ipynb. Best model weights have been uploaded.
+All test error rates in percent. All results were obtained with Keras using the Theano backend. Source code resides in https://github.com/j05t/emnist/blob/master/emnist.ipynb, a slightly adapted (and more recent) version using the TensorFlow backend is available at https://github.com/j05t/emnist/blob/master/emnist_tensorflow.ipynb. See https://github.com/j05t/emnist/blob/master/setup.txt for information regarding setup and usage. Detailed results can be viewed at https://github.com/j05t/emnist/blob/master/plot_history/plot_csv.ipynb. Best model weights have been uploaded. 
+
+A JSON/H5 export for the best single model has been uploaded into export_json_h5 directory. The input normalization function for this exported model has hard coded values for image mean and standard deviation based on EMNIST Digits training data.
 # Test error rates of this model on EMNIST Digits test data:
 0.16% test error rate gives us a total of 64 incorrect predictions on the EMNIST Digits testing dataset of 40,000 images:
 ![incorrect predictions](incorrect_predictions_emnist.png)
