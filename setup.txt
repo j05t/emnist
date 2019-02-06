@@ -12,12 +12,10 @@ If you ONLY want to do inference (i.e. make predictions) the CPU backend is suff
 conda install tensorflow keras
 
 
-Edit ~./keras/keras.json to specify preferred backend.
-Models were created and trained with the theano backend but should work 
-fine with the tensorflow backend as well. Unfortunately, saving training 
-histories does not seem to work with the tensorflow backend anymore.
+The Tensorflow notebook works without any further modifications.
 
-theano backend (development of theano is discontinued):
+Edit ~./keras/keras.json only if using the Theano backend:
+
 {
     "epsilon": 1e-07,
     "backend": "theano",
@@ -25,6 +23,7 @@ theano backend (development of theano is discontinued):
     "image_dim_ordering": "th",
     "image_data_format": "channels_first"
 }
+
 
 run nvidia-smi to check CUDA status:
 +-----------------------------------------------------------------------------+
@@ -46,5 +45,5 @@ run nvidia-smi to check CUDA status:
 +-----------------------------------------------------------------------------+
 
 Open the Jupyter notebook:
-jupyter notebook emnist.ipynb   # when using the theano backend
+jupyter notebook emnist.ipynb               # when using the theano backend
 jupyter notebook emnist_tensorflow.ipynb    # when using the tensorflow backend
